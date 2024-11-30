@@ -1,7 +1,8 @@
-<h1 class="is-size-2">Current Policies</h1>
-  <div class="is-flex is-flex-direction-column is-justify-content-space-evenly is-flex-wrap-wrap">
+<h1 class="is-size-2">Current Policies </h1>
+<div class="button is-primary mb-2">Import New</div>
+  <div class="is-flex is-flex-direction-column is-flex-wrap-wrap">
     <% (1..5).each do %>
-      <div class="card">
+      <div class="card m-2" style="max-width: 50em; min-width: 30em">
         <div class="card-content">
           <div class="media">
             <div class="media-left">
@@ -18,14 +19,15 @@
               <p class="subtitle is-6">provider</p>
             </div>
               <span class="icon has-text-light">
-                <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-thin</title><path d="M14 16.94V12.94H5.08L5.05 10.93H14V6.94L19 11.94Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-thin</title><path d="M14 16.94V12.94H5.08L5.05 10.93H14V6.94L19 11.94Z" /></svg>
               </span>
           </div>
-
+            <div class="content">
+              <p>Police summary is here</p>
+              <b>Started</b> <time datetime="2016-1-1">1 Jan 2016</time>
+            </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-
