@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="is-size-2">Current Policies</h1>
+  <div class="is-flex is-flex-direction-column is-justify-content-space-evenly is-flex-wrap-wrap">
+    <% (1..5).each do %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img
+                  src="https://bulma.io/assets/images/placeholders/96x96.png"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+
+            <div class="media-content">
+              <p class="title is-4">Auto Policy</p>
+              <p class="subtitle is-6">provider</p>
+            </div>
+              <span class="icon has-text-light">
+                <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-thin</title><path d="M14 16.94V12.94H5.08L5.05 10.93H14V6.94L19 11.94Z" /></svg>
+              </span>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
