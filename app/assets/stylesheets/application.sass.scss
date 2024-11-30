@@ -1,0 +1,10 @@
+// Entry point for your Sass build
+@use "bulma/bulma";
+
+.flash_alert {
+  @extend .is-danger
+}
+
+.flash_notice {
+  @extend .is-success
+}
