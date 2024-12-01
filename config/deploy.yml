@@ -25,7 +25,9 @@ proxy:
   ssl: true
   # host: localhost
   # Proxy connects to your container on port 80 by default.
-  host: toosaint.co
+  hosts:
+    - toosaint.co
+    - www.toosaint.co
   app_port: 3000
 
 # Credentials for your image host.

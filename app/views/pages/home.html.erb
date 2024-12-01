@@ -1,5 +1,19 @@
-<h1 class="is-size-2">Current Policies </h1>
-<div class="button is-primary mb-2">Import New</div>
+<nav class="level has-background-primary-light p-2">
+  <!-- Left side -->
+  <div class="level-left">
+    <div class="level-item">
+      <p class="title"><strong>Policies</strong></p>
+    </div>
+  </div>
+
+  <!-- Right side -->
+  <div class="level-right">
+    <p class="level-item"><strong>All</strong></p>
+    <p class="level-item"><a>Auto</a></p>
+    <p class="level-item"><a>Health</a></p>
+    <p class="level-item"><a class="button is-dark">New</a></p>
+  </div>
+</nav>
   <div class="is-flex is-flex-direction-column is-flex-wrap-wrap">
     <% (1..5).each do %>
       <div class="card m-2" style="max-width: 50em; min-width: 30em">
@@ -23,8 +37,11 @@
               </span>
           </div>
             <div class="content">
-              <p>Police summary is here</p>
-              <b>Started</b> <time datetime="2016-1-1">1 Jan 2016</time>
+              <div class="tag is-primary is-light is-medium">Monthly Premium : $20 </div>
+              <div class="tag is-primary is-light is-medium">Coverage : $2000</div>
+              <div class="tag is-info is-light is-medium">
+                <time datetime="2016-1-1">1 Jan 2016</time>
+              </div>
             </div>
         </div>
       </div>

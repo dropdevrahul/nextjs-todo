@@ -1,7 +1,7 @@
 <div class="columns">
   <div class="column is-one-third">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{ class:"box" }) do |f| %>
-      <h2 class="is-size-1">Log in</h2>
+      <h2 class="is-size-3">Log in</h2>
       <div class="field">
         <%= f.label :email, class:"label" %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
@@ -16,15 +16,15 @@
       <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.check_box :remember_me, class:"checkbox" %>
-          <%= f.label :remember_me, class:"label" %>
+          <%= f.label :remember_me, class:"checkbox" %>
         </div>
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in", class:"button is-primary"%>
+        <%= f.submit "Log in", class:"button is-dark"%>
       </div>
 
-      <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links", class:"mt-2" %>
     <% end %>
   </div>
 </div>

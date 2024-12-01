@@ -1,0 +1,17 @@
+<h1 class="is-size-2">Profile</h1>
+<div class="columns">
+  <div class="column is-6">
+    <form class="box">
+      <h2 class="is-size-4 mb-2">Personal</h2>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left">
+          <input disabled class="input" type="email" value="<%= current_user.email %>"/>
+          <span class="icon is-small is-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>email-outline</title><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>
+          </span>
+        </span>
+        </div>
+    </form>
+  </div>
+</div>
