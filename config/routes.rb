@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   root "pages#home"
 
   get "profile" => "profile#show", as: :show_profile
+  get "insurer" => "pages#insurer_home", as: :insurer_home
 end
