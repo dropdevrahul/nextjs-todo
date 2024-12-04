@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get "pages/home"
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -14,6 +14,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#home"
 
-  get "profile" => "profile#show", as: :show_profile
+  get "profile" => "profile#index", as: :show_profile
   get "insurer" => "pages#insurer_home", as: :insurer_home
+  get "policy/details" => "policy#index", as: :policy_details
+
+  if Rails.env.development?
+    namespace :api, defaults: { format: :json } do
+      resources :policies, controllers: "policies_controller"
+    end
+  end
 end

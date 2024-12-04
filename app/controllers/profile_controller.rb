@@ -1,4 +1,5 @@
 class ProfileController < ApplicationController
-  def show
+  def index
+    authorize current_user, policy_class: CustomerPolicy
   end
 end

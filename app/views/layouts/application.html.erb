@@ -38,7 +38,7 @@
         Home
       </a>
 
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.customer? %>
         <%= link_to "Profile",  show_profile_path, class:"navbar-item"%>
       <% end %>
 

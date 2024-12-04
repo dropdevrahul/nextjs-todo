@@ -4,4 +4,8 @@ class CustomerPolicy < ApplicationPolicy
  def home?
    user.customer?
  end
+
+ def index?
+   user.customer?
+ end
 end

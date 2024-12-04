@@ -1,8 +1,20 @@
 <div class="columns">
   <div class="column is-half">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "box"}) do |f| %>
-    <h2 class="is-size-3">Sign up</h2>
+    <h2 class="is-size-3 has-text-weight-bold">Sign up</h2>
     <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="is-flex flex-direction-row">
+      <div class="field is-flex-grow-1 mr-2">
+        <%= f.label :name, class:"label" %>
+        <%= f.text_field :name, autofocus: false,  class:"input" %>
+      </div>
+
+      <div class="field is-flex-grow-1">
+        <%= f.label :zipcode, class:"label" %>
+        <%= f.text_field :zipcode, autofocus: false, class:"input" %>
+      </div>
+    </div>
 
     <div class="field">
       <%= f.label :email, class:"label" %>
@@ -23,10 +35,10 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up",class:"button is-dark" %>
+      <%= f.submit "Sign up",class:"button is-primary is-medium" %>
     </div>
     <%= render "devise/shared/links" %>
-  <% end %>
+    <% end %>
   </div>
 </div>
 
